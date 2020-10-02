@@ -32,3 +32,15 @@ for (let i: number = 0; i < maxNumber; i++) {
         console.log("Numero disparo prima di 100: " + i);
     }
 }
+
+/**
+ * ESERCIZIO 4
+ * Stampare solo i numeri pari dei primi 100 numeri naturali
+ */
+
+console.log("\n-- ESERCIZIO 4--\n");
+for (let i: number = 0; i < maxNumber; i++) {
+    if (i % 2 === 0) {
+        console.log("Numero pari prima di 100: " + i);
+    }
+}
