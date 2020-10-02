@@ -5,7 +5,7 @@
 
 const maxNumber: number = 100;
 
-console.log("\n-- ESERCIZIO 1--\n");
+console.log("\n-- ESERCIZIO 1--\n* Stampare i primi 100 numeri naturali *\n");
 for (let i: number = 0; i < maxNumber; i++) {
     console.log("Numero: " + i);
 }
@@ -26,7 +26,7 @@ console.log("\n-- ESERCIZIO 2--\n\nSomma primi 100 numeri naturali: " + sum);
  * Stampare solo i numeri dispari dei primi 100 numeri naturali
  */
 
-console.log("\n-- ESERCIZIO 3--\n");
+console.log("\n-- ESERCIZIO 3--\n* Stampare solo i numeri dispari dei primi 100 numeri naturali *\n");
 for (let i: number = 0; i < maxNumber; i++) {
     if (i % 2 !== 0) {
         console.log("Numero disparo prima di 100: " + i);
@@ -38,9 +38,19 @@ for (let i: number = 0; i < maxNumber; i++) {
  * Stampare solo i numeri pari dei primi 100 numeri naturali
  */
 
-console.log("\n-- ESERCIZIO 4--\n");
+console.log("\n-- ESERCIZIO 4--\n* Stampare solo i numeri pari dei primi 100 numeri naturali *\n");
 for (let i: number = 0; i < maxNumber; i++) {
     if (i % 2 === 0) {
         console.log("Numero pari prima di 100: " + i);
     }
+}
+
+/**
+ * ESERCIZIO 5
+ * Stampare i primi 100 numeri naturali in ordine inverso
+ */
+
+console.log("\n-- ESERCIZIO 5--\n* Stampare i primi 100 numeri naturali in ordine inverso *\n");
+for (let i: number = maxNumber - 1; i >= 0; i--) {
+    console.log("Numero ordine invertito: " + i);
 }
