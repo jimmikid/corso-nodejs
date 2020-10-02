@@ -20,3 +20,15 @@ for (let i: number = 0; i < maxNumber; i++) {
     sum += i;
 }
 console.log("\n-- ESERCIZIO 2--\n\nSomma primi 100 numeri naturali: " + sum);
+
+/**
+ * ESERCIZIO 3
+ * Stampare solo i numeri dispari dei primi 100 numeri naturali
+ */
+
+console.log("\n-- ESERCIZIO 3--\n");
+for (let i: number = 0; i < maxNumber; i++) {
+    if (i % 2 !== 0) {
+        console.log("Numero disparo prima di 100: " + i);
+    }
+}
