@@ -1,16 +1,18 @@
 /**
  * ESERCIZIO 1
+ * Stampare i primi 100 numeri naturali
  */
 
 const maxNumber: number = 100;
 
 console.log("\n-- ESERCIZIO 1--\n");
 for (let i: number = 0; i < maxNumber; i++) {
-    console.log("Numbero: " + i);
+    console.log("Numero: " + i);
 }
 
 /**
  * ESERCIZIO 2
+ * Stampare la somma dei primi 100 numeri naturali
  */
 let sum: number = 0;
 
