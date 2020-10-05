@@ -21,7 +21,7 @@ console.log("||======== FINE ESERCIZIO =========||\n\n");
 /* ESERCIZIO 3 - Stampare solo i numeri dispari dei primi 100 numeri naturali */
 console.log("||========== ESERCIZIO 3 ==========||\n");
 for (let disp100 = 0; disp100 <= 100; disp100++) {
-  if (disp100 % 2 != 0) {
+  if (disp100 % 2 !== 0) {
     console.log(disp100);
 	}
 }
