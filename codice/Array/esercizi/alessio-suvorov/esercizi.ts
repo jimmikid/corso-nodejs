@@ -27,37 +27,37 @@ class ArrayExercicesApp {
    private invertFirstArray = ():number[] => exercises.createArrayWith100Nums().reverse()
    //Exsercise 6
    private sumArraysOneAndFour = ():number[] => {
-      const arr1: number[] = this.interleaveArraysAndInvertNums();
+      const arr1: number[] = this.interleaveArraysAndInvertNums()
       return this.createArrayWith100Nums().map((num, index) => num + arr1[index])
    }
    // The method to run all the exercises.
    public run = (): void => {
-      let exerciseNumber: number = 1;
-      const methods: string[] = Object.getOwnPropertyNames(this); // getting all methods in this class
-      const indexOfCurrentMethod = methods.indexOf("run"); //to avoid infinite recursion I need to exclude currend method from array
+      let exerciseNumber: number = 1
+      const methods: string[] = Object.getOwnPropertyNames(this) // getting all methods in this class
+      const indexOfCurrentMethod = methods.indexOf("run") //to avoid infinite recursion I need to exclude currend method from array
       methods.splice(indexOfCurrentMethod, 1)
       //iterating and running all the methods
-      let exerciseNumberToString: string;
+      let exerciseNumberToString: string
       for (const method of methods) {
-         exerciseNumberToString = `Exercise_${exerciseNumber}`;
-         Helpers.separator(exerciseNumberToString);
-         exerciseNumber++;
-         console.log(this[method]());
-         Helpers.separator();     
+         exerciseNumberToString = `Exercise_${exerciseNumber}`
+         Helpers.separator(exerciseNumberToString)
+         exerciseNumber++
+         console.log(this[method]())
+         Helpers.separator()
       }
    }
 }
 
 // Class-helper, which simply separates lines and creates arrays
 class Helpers {
-   static readonly ONE_HUNDRED : number = 100;
-   static readonly ZERO : number = 0;
-   static readonly TWO : number = 2;
+   static readonly ONE_HUNDRED : number = 100
+   static readonly ZERO : number = 0
+   static readonly TWO : number = 2
    static separator = (exerciseNumber:string ="=========="): void => console.log("===========================" + exerciseNumber + "===========================")
-   static arrCreate = (num: number): number[] => [...Array(num).keys()];
+   static arrCreate = (num: number): number[] => [...Array(num).keys()]
 }
 
 
 // Instance creation and app running
-const exercises = new ArrayExercicesApp();
-exercises.run();
+const exercises = new ArrayExercicesApp()
+exercises.run()
