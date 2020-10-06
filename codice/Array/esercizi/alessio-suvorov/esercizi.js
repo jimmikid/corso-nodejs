@@ -18,7 +18,7 @@ class ArrayExercicesApp {
         //Exercise 3
         this.createArrayWith50OddNums = () => Helpers.arrCreate(Helpers.ONE_HUNDRED).filter(i => i % Helpers.TWO !== Helpers.ZERO);
         //Exercise 4
-        this.interleave = () => {
+        this.interleaveArraysAndInvertNums = () => {
             const arrayEven = this.createArrayWith50EvenNums();
             const arrayOdd = this.createArrayWith50OddNums();
             const length = Math.min(arrayEven.length, arrayOdd.length);
@@ -28,18 +28,19 @@ class ArrayExercicesApp {
         this.invertFirstArray = () => exercises.createArrayWith100Nums().reverse();
         //Exsercise 6
         this.sumArraysOneAndFour = () => {
-            const arr1 = this.interleave();
+            const arr1 = this.interleaveArraysAndInvertNums();
             return this.createArrayWith100Nums().map((num, index) => num + arr1[index]);
         };
         // The method to run all the exercises.
         this.run = () => {
             let exerciseNumber = 1;
             const methods = Object.getOwnPropertyNames(this); // getting all methods in this class
-            var index = methods.indexOf("run"); //to avoid infinite recursion I need to exclude currend method from array
-            methods.splice(index, 1);
+            const indexOfCurrentMethod = methods.indexOf("run"); //to avoid infinite recursion I need to exclude currend method from array
+            methods.splice(indexOfCurrentMethod, 1);
             //iterating and running all the methods
+            let exerciseNumberToString;
             for (const method of methods) {
-                let exerciseNumberToString = `Exercise_${exerciseNumber}`;
+                exerciseNumberToString = `Exercise_${exerciseNumber}`;
                 Helpers.separator(exerciseNumberToString);
                 exerciseNumber++;
                 console.log(this[method]());
