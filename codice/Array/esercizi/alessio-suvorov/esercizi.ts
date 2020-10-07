@@ -11,7 +11,7 @@
  */
 class ArrayExercicesApp {
    //Exercise 1
-   private createArrayWith100Nums = ():number[] => Helpers.arrCreate(Helpers.ONE_HUNDRED)
+   private createArrayWith100Nums = ():number[] => Helpers.arrCreate(Helpers.ONE_HUNDRED).map(i => ++i)
    //Exercise 2
    private createArrayWith50EvenNums = ():number[] => Helpers.arrCreate(Helpers.ONE_HUNDRED).filter(i => i % Helpers.TWO === Helpers.ZERO)
    //Exercise 3
