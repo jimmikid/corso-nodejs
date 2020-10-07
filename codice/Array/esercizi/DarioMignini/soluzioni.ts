@@ -60,12 +60,13 @@ console.log(arr);
 arr.reverse() //li rimetto a posto
 console.time('myreverse');
 let temp: number;
-let len: number = arr.length-1;
-let end: number = (arr.length%2) + Math.floor(arr.length / 2);
-for(let i = 0; i < end; i++) {
+let i: number = 0;
+let j: number = arr.length - 1;
+while (i < j) {
   temp = arr[i];
-  arr[i] = arr[len-i];
-  arr[len-i] = temp;
+  arr[i] = arr[j];
+  arr[j] = temp;
+  i++; j--;
 }
 console.timeEnd('myreverse');
 console.log(arr, arr.length);
