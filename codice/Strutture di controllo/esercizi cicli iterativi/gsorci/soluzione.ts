@@ -15,7 +15,7 @@
  */
 console.log('soluzione esercizio 1');
 
-for (let i = 1; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
     console.log(i);
 }
 
@@ -26,7 +26,7 @@ console.log('soluzione esercizio 2');
 
 let somma: number = 0;
 
-for (let i = 1; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
     somma += i;     
 }
 
@@ -37,7 +37,7 @@ console.log(somma);
  */
 console.log('soluzione esercizio 3');
 
-for (let i = 1; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
     if (i % 2 != 0) {
         console.log(i);
     }
@@ -48,7 +48,7 @@ for (let i = 1; i <= 100; i++) {
  */
 console.log('soluzione esercizio 4');
 
-for (let i = 1; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
     if (i % 2 == 0) {
         console.log(i);
     }
@@ -59,6 +59,6 @@ for (let i = 1; i <= 100; i++) {
  */
 console.log('soluzione esercizio 5');
 
-for (let i = 100; i >= 1; i--) {
+for (let i = 100; i >= 0; i--) {
     console.log(i);
 }
