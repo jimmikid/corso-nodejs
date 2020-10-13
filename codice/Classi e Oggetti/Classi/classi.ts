@@ -28,16 +28,29 @@ class Automobile {
     stampaColore(): void {
         console.log(this.colore);
     }
+    stampaMarca(): void {
+        console.log(this.marca);
+    }
 };
 
 //Per utilizzare un oggetto di una determinata classe bisogna utilizzare la parola chiave riservata new seguita dal nome della classe
 let panda = new Automobile();
+let golf = new Automobile();
+let troc = new Automobile();
 
 //Per accedere ai campi di una classe di usa l'operatore .
 panda.colore = 'rosso';
 panda.giraADestra();
 panda.stampaColore();
-
+console.log('\n==============\n');
+golf.colore = 'grigio';
+golf.suonaClacson();
+golf.stampaColore();
+console.log('\n==============\n');
+troc.marca = 'volkswagen';
+troc.stampaMarca();
+troc.giraASinistra();
+console.log('\n==============\n');
 
 
 //Si può definire anche il costruttore di una classe, ovvero un metodo particolare che permette di passare dei parametri quando
