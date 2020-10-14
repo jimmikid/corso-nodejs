@@ -33,29 +33,22 @@ class Point {
     };
 
     constructor(_x: any, _y: any) {
-        try {
-            if (typeof _x === "number" && typeof _y === "number") {
-                this.x = _x;
-                this.y = _y;
-            } else {
-                throw 'I valori immessi per definire le coordinate del punto devono essere di tipo numerico.';
-            }
-        } catch (error) {
-            throw new TypeError(error);
+        if (typeof _x === "number" && typeof _y === "number") {
+            this.x = _x;
+            this.y = _y;
+        } else {
+            throw TypeError('I valori immessi per definire le coordinate del punto devono essere di tipo numerico.');
         }
     }
 
     static calculateDistance(p1: any, p2: any): number {
         let distance: number;
-        try {
-            if (p1 instanceof Point && p2 instanceof Point) {
-                distance = Math.sqrt(Math.pow((p2.getX() - p1.getX()), 2) + Math.pow((p2.getY() - p1.getY()), 2));
-                return distance;
-            } else {
-                throw 'I valori immessi per calcolare la distanza non sono l\'istanza di un PUNTO.';
-            }
-        } catch (error) {
-            throw new TypeError(error);
+
+        if (p1 instanceof Point && p2 instanceof Point) {
+            distance = Math.sqrt(Math.pow((p2.getX() - p1.getX()), 2) + Math.pow((p2.getY() - p1.getY()), 2));
+            return distance;
+        } else {
+            throw TypeError('I valori immessi per calcolare la distanza non sono l\'istanza di un PUNTO.');
         }
     }
 }
