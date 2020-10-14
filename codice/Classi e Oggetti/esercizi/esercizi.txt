@@ -1,0 +1,29 @@
+Esercizi su Classi e Oggetti:
+
+1a.  Creare una classe che rappresenta un punto del piano con coordinate ( x,y ) con relativi getters e setters
+
+1b.  La Classe Punto dovrà avere un controllo nel costruttore in cui si verifica 
+    che entrambi i parametri del costruttore siano number, in caso negativo 
+    bisogna lanciare un errore ( throw TypeError ) che impedisce di creare l'oggetto e ferma l'esecuzione del programma
+
+1c.  La Classe Punto dovrà contenere un metodo per il calcolo della distanza euclidea fra due punti.
+    La formula per il calcolo della distanza fra due punti è la seguente:
+    d(p1, p2) = sqrt( pow((x2-x1),2) + pow((y2-y1),2) )
+    Se non risultasse chiara potete trovare la formula al seguente indirizzo 
+    https://www.youmath.it/formulari/formulari-di-geometria-analitica/426-distanza-tra-due-punti-nel-piano.html
+
+    ATTENZIONE: il metodo che calcola la distanza fra due punti deve verificare che effettivamente stia operando su
+    elementi di classe Punto!
+
+2a. Creare una classe che rappresenta un Triangolo che prende in ingresso la lunghezza dei tre lati con relativi getters e setters
+
+2b. La Classe Triangolo dovrà avere un controllo nel costruttore in cui si verifica che i lati passati in ingresso siano di 
+    tipo number, in caso negativo bisogna lanciare un errore ( throw TypeError ) che impedisce di creare l'oggetto.
+    Un Triangolo per esistere ha bisogno che la lunghezza di un lato non sia mai superiore alla somma delle lunghezze
+    degli altri due: verificare nel costruttore anche questa eventualità; in caso contrario lanciare un errore generico (throw new Error('messaggio di errore'))
+
+2c. Creare un metodo che restituisce se un Triangolo è scaleno, isoscele o equilatero
+
+2d. Creare un metodo che calcola l'Area ( attenzione al tipo di Triangolo) ed il perimetro di un Triangolo.
+
+Se ci fossero eventuali dubbi non esitate a contattarmi. Buon Lavoro!
