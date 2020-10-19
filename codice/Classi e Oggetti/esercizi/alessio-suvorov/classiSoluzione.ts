@@ -40,7 +40,6 @@ class Triangle {
     private readonly EQUILATERAL = 1
     private readonly SCALENE = 2
     private readonly ISOSCELES = 3
-    private base: number;
     private typeTriangle: number = null
     constructor(private _part1: number, private _part2: number, private _part3: number) {
         if(Number(_part1) && Number(_part2) && Number(_part3)) {
@@ -74,55 +73,18 @@ class Triangle {
         }
     }
 
-    private findBase(): number {
-        let base;
-        if (this._part1 != this._part2 && this._part1 != this._part3) {
-            base = this._part1
-            this.base = 1
-        } else if (this._part2 != this._part1 && this._part2 != this._part3) {
-            base = this._part2
-            this.base = 2
-        } else {
-            base = this._part3  
-            this.base = 3
-        }
-        if (base) {
-            console.log(`Base is ${base}`)
-           return base 
-        } else {
-            throw new Error("Not an isosceles triangle")
-        }
-    }
-
     public calculateArea(): void {
         if(this.typeTriangle === null) {
             this.checkRectangleType()
         } 
-        
         if(this.typeTriangle === this.EQUILATERAL) {
-            // Through base and height
-            let altezza = this._part1 * Math.sqrt(3) / 2
+            // Through height
             console.log(`Rectangle is equilateral. Area: ${Math.pow(this._part1, 2) * Math.sqrt(3) / 4}`)
-        } else if(this.typeTriangle === this.SCALENE) { 
+        } else { 
             // Geron formula
             let p = 0.5 * (this._part1 + this._part2 + this._part3)
             console.log(`Rectangle is scalene. Area: ${Math.sqrt(p * (p-this._part1) * (p - this._part2) * (p-this._part3))}`)
-        } else {
-            // Through base and height
-            let base = this.findBase();
-            let altezza;
-            if (this.base === 1) {
-                altezza = Math.sqrt(Math.pow(this._part2, 2) - Math.pow(base, 2) / 4)
-                console.log(`Triangle is isosceles. Area: ${0.5 * base * altezza}`)
-            } else if (this.base === 2) {
-                altezza = Math.sqrt(Math.pow(this._part1, 2) - Math.pow(base, 2) / 4)
-                console.log(`Triangle is isosceles. Area: ${0.5 * base * altezza}`)
-            } else {
-                altezza = Math.sqrt(Math.pow(this._part2, 2) - Math.pow(base, 2) / 4)
-                console.log(`Triangle is isosceles. Area: ${0.5 * base * altezza}`)
-            }
         }
-        
     }
 }
 console.log("==================Exercise_2========================")
