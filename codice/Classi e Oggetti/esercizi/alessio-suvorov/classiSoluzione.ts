@@ -100,12 +100,15 @@ class Triangle {
         } 
         
         if(this.typetreangle === this.EQUILATERAL) {
+            // Through base and height
             let altezza = this._part1 * Math.sqrt(3) / 2
             console.log(`Rectangle is equilateral. Area: ${Math.pow(this._part1, 2) * Math.sqrt(3) / 4}`)
-        } else if(this.typetreangle === this.SCALENE) {   
+        } else if(this.typetreangle === this.SCALENE) { 
+            // Geron formula
             let p = 0.5 * (this._part1 + this._part2 + this._part3)
             console.log(`Rectangle is scalene. Area: ${Math.sqrt(p * (p-this._part1) * (p - this._part2) * (p-this._part3))}`)
         } else {
+            // Through base and height
             let base = this.findBase();
             let altezza;
             if (this.base === 1) {
