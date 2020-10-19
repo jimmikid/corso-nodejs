@@ -41,7 +41,7 @@ class Triangle {
     private readonly SCALENE = 2
     private readonly ISOSCELES = 3
     private base: number;
-    private typetreangle: number = null
+    private typeTriangle: number = null
     constructor(private _part1: number, private _part2: number, private _part3: number) {
         if(Number(_part1) && Number(_part2) && Number(_part3)) {
             this._part1 = _part1
@@ -63,14 +63,14 @@ class Triangle {
     }
     public checkRectangleType(): void {
         if(this._part1 === this._part2 && this._part2 === this._part3 ) {
-            this.typetreangle = this.EQUILATERAL
-            console.log("Treangle is equilateral")
+            this.typeTriangle = this.EQUILATERAL
+            console.log("Triangle is equilateral")
         } else if (this._part1 !== this._part2 && this._part2 !== this._part3) {
-            this.typetreangle = this.SCALENE
-            console.log("Treangle is scalene")
+            this.typeTriangle = this.SCALENE
+            console.log("Triangle is scalene")
         } else {
-            this.typetreangle = this.ISOSCELES
-            console.log("Treangle is isosceles")
+            this.typeTriangle = this.ISOSCELES
+            console.log("Triangle is isosceles")
         }
     }
 
@@ -90,20 +90,20 @@ class Triangle {
             console.log(`Base is ${base}`)
            return base 
         } else {
-            throw new Error("Not an isosceles treangle")
+            throw new Error("Not an isosceles triangle")
         }
     }
 
     public calculateArea(): void {
-        if(this.typetreangle === null) {
+        if(this.typeTriangle === null) {
             this.checkRectangleType()
         } 
         
-        if(this.typetreangle === this.EQUILATERAL) {
+        if(this.typeTriangle === this.EQUILATERAL) {
             // Through base and height
             let altezza = this._part1 * Math.sqrt(3) / 2
             console.log(`Rectangle is equilateral. Area: ${Math.pow(this._part1, 2) * Math.sqrt(3) / 4}`)
-        } else if(this.typetreangle === this.SCALENE) { 
+        } else if(this.typeTriangle === this.SCALENE) { 
             // Geron formula
             let p = 0.5 * (this._part1 + this._part2 + this._part3)
             console.log(`Rectangle is scalene. Area: ${Math.sqrt(p * (p-this._part1) * (p - this._part2) * (p-this._part3))}`)
@@ -113,13 +113,13 @@ class Triangle {
             let altezza;
             if (this.base === 1) {
                 altezza = Math.sqrt(Math.pow(this._part2, 2) - Math.pow(base, 2) / 4)
-                console.log(`Rectangle is isosceles. Area: ${0.5 * base * altezza}`)
+                console.log(`Triangle is isosceles. Area: ${0.5 * base * altezza}`)
             } else if (this.base === 2) {
                 altezza = Math.sqrt(Math.pow(this._part1, 2) - Math.pow(base, 2) / 4)
-                console.log(`Rectangle is isosceles. Area: ${0.5 * base * altezza}`)
+                console.log(`Triangle is isosceles. Area: ${0.5 * base * altezza}`)
             } else {
                 altezza = Math.sqrt(Math.pow(this._part2, 2) - Math.pow(base, 2) / 4)
-                console.log(`Rectangle is isosceles. Area: ${0.5 * base * altezza}`)
+                console.log(`Triangle is isosceles. Area: ${0.5 * base * altezza}`)
             }
         }
         
